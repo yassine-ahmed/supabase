@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Light mode */
+  --background: 0 0% 100%;
+  --foreground: 240 10% 6%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 6%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 217 33% 97%;
+  --secondary-foreground: 240 10% 6%;
+  --muted: 217 33% 97%;
+  --muted-foreground: 217 10% 46%;
+  --accent: 217 91% 60%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 90% 56%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 217 20% 94%;
+  --input: 217 20% 94%;
+  --ring: 217 91% 60%;
+  --font-sans: 'Inter', sans-serif;
+  --radius: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark mode */
+    --background: 217 33% 6%;
+    --foreground: 0 0% 98%;
+    --card: 217 33% 10%;
+    --card-foreground: 0 0% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 217 33% 6%;
+    --secondary: 217 33% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 217 20% 25%;
+    --muted-foreground: 217 10% 50%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 217 33% 6%;
+    --destructive: 0 90% 56%;
+    --destructive-foreground: 0 0% 0%;
+    --border: 217 20% 20%;
+    --input: 217 20% 20%;
+    --ring: 217 91% 60%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 1rem;
+}
+
+/* Code blocks */
+code {
+  background-color: hsl(var(--secondary));
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: hsl(var(--card));
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  transition: all 200ms ease;
+}
+
+/* Focus styles */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.875rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+}
